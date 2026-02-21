@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "dictionaries": ["@custom-dictionaries/tooling", "css", "git", "npm"],
+  "dictionaryDefinitions": [
+    {
+      "addWords": true,
+      "name": "@custom-dictionaries/tooling",
+      "path": "./dictionaries/tooling.txt"
+    }
+  ],
+  "enableGlobDot": true,
+  "ignorePaths": [
+    "pnpm-lock.yaml",
+    "dist",
+    ".nx",
+
+    // Ignore all files in the .git directory except `COMMIT_EDITMSG`,
+    // so that commit messages can be checked using Git's "commit-msg" hook.
+    ".git/**/!(COMMIT_EDITMSG)"
+  ],
+  "language": "en,en-GB",
+  "useGitignore": true,
+  "version": "0.2"
+}

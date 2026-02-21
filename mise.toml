@@ -1,0 +1,13 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+min_version = "2024.11.1"
+
+[env]
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[settings.npm]
+package_manager = "pnpm"
+
+[tools]
+node = "24.13.1"
+pnpm = "10.30.1"

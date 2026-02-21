@@ -1,0 +1,16 @@
+{
+  "compileOnSave": false,
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.repo-config-files.json"
+    },
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./tools/eslint-config"
+    }
+  ]
+}

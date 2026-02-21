@@ -1,0 +1,4 @@
+# Auto-generated but not included in .gitignore
+**/generated
+**/next-env.d.ts
+pnpm-lock.yaml

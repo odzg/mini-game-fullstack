@@ -1,0 +1,13 @@
+archi
+corepack
+depcruise
+lefthook
+mise
+nx
+odzg
+orpc
+pnpm
+prisma
+sonarjs
+syncpack
+tailwindcss

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "jsx": "preserve",
+    "noEmit": true,
+    "outDir": "dist",
+    // "paths": {
+    //   "@/*": ["./src/*"]
+    // },
+    "plugins": [{ "name": "next" }],
+    // "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+  },
+  "exclude": ["out-tsc", "dist", ".next"],
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "../../apps/web/.next/types/**/*.ts",
+    "../../dist/apps/web/.next/types/**/*.ts",
+    "next-env.d.ts",
+    "eslint.config.ts",
+    "../../eslint.config.ts",
+    "postcss.config.js",
+    "next.config.ts"
+  ]
+}
