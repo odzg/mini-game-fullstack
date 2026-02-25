@@ -8,9 +8,10 @@
       "fileFormat": "json",
       "managerFilePatterns": ["/package.json/"],
       "matchStrings": [
-        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devDependencies\"}",
+        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devDependencies\", \"versioning\": \"semver\"}",
         "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\"}"
-      ]
+      ],
+      "versioningTemplate": ""
     }
   ],
   "extends": ["config:best-practices"]
