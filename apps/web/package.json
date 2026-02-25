@@ -1,12 +1,9 @@
 {
   "type": "module",
   "name": "@odzg/web",
-  "description": "Web application for managing tasks",
+  "description": "Next.js frontend for the mini game",
   "version": "0.0.0",
   "private": true,
-  "nx": {
-    "name": "web"
-  },
   "devDependencies": {
     "@odzg/eslint-config": "workspace:*"
   }

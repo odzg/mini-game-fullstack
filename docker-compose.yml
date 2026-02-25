@@ -1,0 +1,57 @@
+services:
+  postgres:
+    container_name: mini-game-postgres
+    environment:
+      POSTGRES_DB: mini_game
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mini_game"]
+      timeout: 5s
+    image: postgres:17.8
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    command: >
+      sh -c "pnpm nx run api:prisma-migrate-deploy &&
+      pnpm nx run api:start"
+    container_name: mini-game-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      API_PORT: 4000
+      APP_ORIGIN: http://localhost:4000
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/mini_game?schema=public
+      FRONTEND_ORIGIN: http://localhost:3000
+      GOOGLE_REDIRECT_URI: http://localhost:4000/auth/google/callback
+    env_file:
+      - .env
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    command: >
+      sh -c "pnpm nx run web:dev -- --hostname 0.0.0.0 --port 3000"
+    container_name: mini-game-web
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:4000
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

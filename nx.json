@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "sync": {
+    "applyChanges": true
+  },
   "generators": {
     "@nx/next": {
       "application": {
@@ -45,5 +48,12 @@
       },
       "plugin": "@nx/eslint/plugin"
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }

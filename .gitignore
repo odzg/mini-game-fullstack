@@ -50,3 +50,11 @@ Thumbs.db
 # Next.js
 .next
 out
+
+# Prisma generated client (prisma-client provider output)
+apps/api/src/generated/prisma
+
+# Local environment files
+.env
+.env.local
+.env.*.local

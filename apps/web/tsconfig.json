@@ -2,13 +2,10 @@
   "compilerOptions": {
     "emitDeclarationOnly": false,
     "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "noEmit": true,
     "outDir": "dist",
-    // "paths": {
-    //   "@/*": ["./src/*"]
-    // },
     "plugins": [{ "name": "next" }],
-    // "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "exclude": ["out-tsc", "dist", ".next"],
@@ -22,8 +19,12 @@
     "../../dist/apps/web/.next/types/**/*.ts",
     "next-env.d.ts",
     "eslint.config.ts",
-    "../../eslint.config.ts",
     "postcss.config.js",
     "next.config.ts"
+  ],
+  "references": [
+    {
+      "path": "../../tools/eslint-config"
+    }
   ]
 }

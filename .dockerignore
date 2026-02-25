@@ -1,0 +1,13 @@
+.git
+.github
+.nx
+.pnpm-store
+.vscode
+coverage
+dist
+node_modules
+tmp
+**/.next
+**/dist
+**/node_modules
+**/*.log

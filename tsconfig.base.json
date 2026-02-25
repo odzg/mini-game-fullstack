@@ -15,7 +15,7 @@
     "importHelpers": true,
     "incremental": true,
     "lib": ["ESNext"],
-    "module": "Preserve",
+    "module": "preserve",
     "moduleDetection": "force",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
@@ -26,8 +26,8 @@
     "rootDir": ".",
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext",
-    "types": ["node"],
+    "target": "esnext",
+    "types": [],
     "verbatimModuleSyntax": true
   }
 }

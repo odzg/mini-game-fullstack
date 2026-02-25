@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "nodenext",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo",
+    "types": ["node"]
+  },
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*.ts", "eslint.config.ts", "prisma.config.ts"],
+  "references": [
+    {
+      "path": "../../tools/eslint-config/tsconfig.lib.json"
+    }
+  ]
+}

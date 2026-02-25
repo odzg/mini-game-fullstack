@@ -1,16 +1,21 @@
 {
   "compileOnSave": false,
   "extends": "./tsconfig.base.json",
-  "files": [],
+  "files": [
+    "commitlint.config.ts",
+    "eslint.config.ts",
+    "prettier.config.ts",
+    "syncpack.config.ts"
+  ],
   "references": [
-    {
-      "path": "./tsconfig.repo-config-files.json"
-    },
     {
       "path": "./apps/web"
     },
     {
       "path": "./tools/eslint-config"
+    },
+    {
+      "path": "./apps/api"
     }
   ]
 }

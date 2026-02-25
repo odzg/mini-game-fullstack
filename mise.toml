@@ -5,9 +5,8 @@ min_version = "2024.11.1"
 [env]
 _.path = ["{{config_root}}/node_modules/.bin"]
 
+[settings]
+idiomatic_version_file_enable_tools = ["node", "pnpm"]
+
 [settings.npm]
 package_manager = "pnpm"
-
-[tools]
-node = "24.13.1"
-pnpm = "10.30.1"

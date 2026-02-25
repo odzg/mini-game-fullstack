@@ -1,0 +1,63 @@
+{
+  "type": "module",
+  "name": "@odzg/api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Node API for the mini game backend",
+  "nx": {
+    "targets": {
+      "prisma-format": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "pnpm exec prisma format",
+          "cwd": "apps/api"
+        }
+      },
+      "prisma-generate": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "pnpm exec prisma generate",
+          "cwd": "apps/api"
+        }
+      },
+      "prisma-migrate-deploy": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "pnpm exec prisma migrate deploy",
+          "cwd": "apps/api"
+        }
+      },
+      "prisma-validate": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "pnpm exec prisma validate",
+          "cwd": "apps/api"
+        }
+      },
+      "serve": {
+        "dependsOn": [
+          "prisma-generate"
+        ],
+        "continuous": true,
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "node --watch src/main.ts",
+          "cwd": "apps/api"
+        }
+      },
+      "start": {
+        "dependsOn": [
+          "prisma-generate"
+        ],
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "node src/main.ts",
+          "cwd": "apps/api"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@odzg/eslint-config": "workspace:*"
+  }
+}
