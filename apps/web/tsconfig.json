@@ -3,7 +3,7 @@
     "emitDeclarationOnly": false,
     "jsx": "preserve",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "noEmit": true,
+    "noEmit": false,
     "outDir": "dist",
     "plugins": [{ "name": "next" }],
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"

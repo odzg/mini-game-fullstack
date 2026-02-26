@@ -1,16 +1,5 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "sync": {
-    "applyChanges": true
-  },
-  "generators": {
-    "@nx/next": {
-      "application": {
-        "linter": "eslint",
-        "style": "tailwind"
-      }
-    }
-  },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": ["default"],
@@ -49,11 +38,14 @@
       "plugin": "@nx/eslint/plugin"
     }
   ],
+  "sync": {
+    "applyChanges": true
+  },
   "targetDefaults": {
-    "@nx/esbuild:esbuild": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+    "lint": {
+      "options": {
+        "maxWarnings": 0
+      }
     }
   }
 }

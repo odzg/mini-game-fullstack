@@ -1,16 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "customManagers": [
+  // "customManagers": [
+  //   {
+  //     "customType": "jsonata",
+  //     "description": "Custom manager for devEngines runtime and packageManager within package.json",
+  //     "fileFormat": "json",
+  //     "managerFilePatterns": ["/package.json/"],
+  //     "matchStrings": [
+  //       "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devEngines.runtime\", \"datasource\": name = \"node\" ? \"node-version\" : (name = \"deno\" ? \"deno\" : \"npm\") }",
+  //       "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devEngines.packageManager\", \"datasource\": \"npm\" }"
+  //     ]
+  //   }
+  // ],
+  "extends": ["config:best-practices"],
+  "packageRules": [
     {
-      "customType": "jsonata",
-      "description": "Custom manager for devEngines runtime and packageManager within package.json",
-      "fileFormat": "json",
-      "managerFilePatterns": ["/package.json/"],
-      "matchStrings": [
-        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devEngines.runtime\", \"datasource\": name = \"node\" ? \"node-version\" : (name = \"deno\" ? \"deno\" : \"npm\") }",
-        "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devEngines.packageManager\", \"datasource\": \"npm\" }"
-      ]
+      "groupName": "runtime-and-package-manager",
+      "matchDepTypes": ["engines", "devEngines"],
+      "matchManagers": ["npm"]
     }
-  ],
-  "extends": ["config:best-practices"]
+  ]
 }
