@@ -11,6 +11,5 @@
         "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\", \"datasource\": \"npm\" }"
       ]
     }
-  ],
-  "extends": ["config:best-practices"]
+  ]
 }
