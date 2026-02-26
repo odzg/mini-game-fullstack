@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/lefthook",
+  "commit-msg": {
+    "commands": {
+      "lint": {
+        "run": "pnpm lint:commit-message"
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": [],
+    "types": ["node"],
     "verbatimModuleSyntax": true
   }
 }
