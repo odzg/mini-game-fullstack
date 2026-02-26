@@ -8,10 +8,9 @@
       "fileFormat": "json",
       "managerFilePatterns": ["/package.json/"],
       "matchStrings": [
-        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"devDependencies\", \"versioning\": \"node\"}",
+        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"versioning\": \"node\"}",
         "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\"}"
-      ],
-      "versioningTemplate": ""
+      ]
     }
   ],
   "extends": ["config:best-practices"]
