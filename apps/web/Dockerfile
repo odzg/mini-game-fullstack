@@ -1,9 +1,9 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6
 # check=error=true
 
 # Base image for local development and CI tasks.
 # Using Ubuntu keeps package availability simple for Node toolchain dependencies.
-FROM ubuntu:latest
+FROM ubuntu:latest@sha256:d1e2e92c075e5ca139d51a140fff46f84315c0fdce203eab2807c7e495eff4f9
 
 # All repository files are copied and commands are run from this directory.
 WORKDIR /workspace
