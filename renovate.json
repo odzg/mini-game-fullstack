@@ -3,15 +3,13 @@
   "customManagers": [
     {
       "customType": "jsonata",
-      // "datasourceTemplate": "npm",
       "description": "Custom manager for devEngines runtime and packageManager within package.json",
       "fileFormat": "json",
       "managerFilePatterns": ["/package.json/"],
       "matchStrings": [
-        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"engines\", \"datasource\": \"node-version\"}",
-        "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\", \"datasource\": \"npm\"}"
+        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"datasource\": name = \"node\" ? \"node-version\" : (name = \"deno\" ? \"deno\" : \"npm\") }",
+        "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\", \"datasource\": \"npm\" }"
       ]
     }
-  ],
-  "extends": ["config:best-practices"]
+  ]
 }
