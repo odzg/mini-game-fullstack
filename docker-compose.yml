@@ -10,7 +10,7 @@ services:
       retries: 10
       test: ["CMD-SHELL", "pg_isready -U postgres -d mini_game"]
       timeout: 5s
-    image: postgres:17.8@sha256:69dddb030ab69d669d8d7c6abf67aeb448178e5270d5f123a21f4f7ac8b46a24
+    image: postgres:17.9@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
     ports:
       - "5432:5432"
     restart: unless-stopped
