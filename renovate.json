@@ -1,32 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  // "customManagers": [
-  //   {
-  //     "customType": "jsonata",
-  //     "datasourceTemplate": "npm",
-  //     "description": "Custom manager for devEngines runtime in package.json",
-  //     "fileFormat": "json",
-  //     "managerFilePatterns": ["/package.json/"],
-  //     "matchStrings": [
-  //       "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"engines\"}",
-  //       "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\"}"
-  //     ]
-  //   }
-  // ],
-  "extends": ["config:best-practices"],
-  "npm": {
-    "customManagers": [
-      {
-        "customType": "jsonata",
-        // "datasourceTemplate": "npm",
-        "description": "Custom manager for devEngines runtime in package.json",
-        "fileFormat": "json",
-        "managerFilePatterns": ["/package.json/"],
-        "matchStrings": [
-          "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"engines\"}",
-          "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\"}"
-        ]
-      }
-    ]
-  }
+  "customManagers": [
+    {
+      "customType": "jsonata",
+      // "datasourceTemplate": "npm",
+      "description": "Custom manager for devEngines runtime and packageManager within package.json",
+      "fileFormat": "json",
+      "managerFilePatterns": ["/package.json/"],
+      "matchStrings": [
+        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version, \"depType\": \"engines\", \"datasource\": \"node-version\"}",
+        "devEngines.packageManager.{ \"depName\": name, \"currentValue\": version, \"depType\": \"packageManager\", \"datasource\": \"npm\"}"
+      ]
+    }
+  ],
+  "extends": ["config:best-practices"]
 }
