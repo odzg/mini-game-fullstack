@@ -35,11 +35,6 @@
     "typescriptreact",
     "yaml"
   ],
-  // "eslint.workingDirectories": [
-  //   {
-  //     "mode": "auto"
-  //   }
-  // ],
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.readonlyInclude": {

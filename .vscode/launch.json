@@ -7,40 +7,40 @@
       "type": "node-terminal"
     },
     {
-      "type": "node",
-      "request": "launch",
-      "name": "Debug api with Nx",
-      "runtimeExecutable": "pnpm exec",
-      "runtimeArgs": ["nx", "serve", "api"],
+      "console": "integratedTerminal",
       "env": {
         "NODE_OPTIONS": "--inspect=9229"
       },
-      "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": ["<node_internals>/**"],
-      "sourceMaps": true,
+      "name": "Debug api with Nx",
       "outFiles": [
         "${workspaceFolder}/apps/api/dist/**/*.(m|c|)js",
         "!**/node_modules/**"
-      ]
+      ],
+      "request": "launch",
+      "runtimeArgs": ["nx", "serve", "api"],
+      "runtimeExecutable": "pnpm exec",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "type": "node"
     },
     {
-      "type": "node",
-      "request": "launch",
-      "name": "Debug @odzg/my-new-app with Nx",
-      "runtimeExecutable": "pnpm exec",
-      "runtimeArgs": ["nx", "serve", "@odzg/my-new-app"],
+      "console": "integratedTerminal",
       "env": {
         "NODE_OPTIONS": "--inspect=9230"
       },
-      "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": ["<node_internals>/**"],
-      "sourceMaps": true,
+      "name": "Debug @odzg/my-new-app with Nx",
       "outFiles": [
         "${workspaceFolder}/apps/my-new-app/dist/**/*.(m|c|)js",
         "!**/node_modules/**"
-      ]
+      ],
+      "request": "launch",
+      "runtimeArgs": ["nx", "serve", "@odzg/my-new-app"],
+      "runtimeExecutable": "pnpm exec",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "type": "node"
     }
   ],
   "version": "0.2.0"
