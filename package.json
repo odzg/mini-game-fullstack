@@ -59,7 +59,7 @@
     "@nx/workspace": "22.5.2",
     "@odzg/eslint-config": "workspace:*",
     "@tailwindcss/postcss": "4.2.1",
-    "@types/node": "24.10.15",
+    "@types/node": "24.12.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "cspell": "9.7.0",
