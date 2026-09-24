@@ -29,8 +29,8 @@
   "dependencies": {
     "@orpc/client": "1.13.5",
     "@orpc/server": "1.13.5",
-    "@prisma/adapter-pg": "7.4.1",
-    "@prisma/client": "7.4.1",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
     "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
